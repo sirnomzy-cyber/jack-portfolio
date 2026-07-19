@@ -70,7 +70,11 @@ const MarqueeSection = () => {
               src={src}
               alt="Featured motion project preview"
               loading="lazy"
-              className="h-[270px] w-[420px] shrink-0 rounded-2xl object-cover"
+              referrerPolicy="no-referrer"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).style.visibility = 'hidden';
+              }}
+              className="h-[270px] w-[420px] shrink-0 rounded-2xl bg-white/5 object-cover"
             />
           ))}
         </div>
@@ -87,7 +91,11 @@ const MarqueeSection = () => {
               src={src}
               alt="Featured motion project preview"
               loading="lazy"
-              className="h-[270px] w-[420px] shrink-0 rounded-2xl object-cover"
+              referrerPolicy="no-referrer"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).style.visibility = 'hidden';
+              }}
+              className="h-[270px] w-[420px] shrink-0 rounded-2xl bg-white/5 object-cover"
             />
           ))}
         </div>
